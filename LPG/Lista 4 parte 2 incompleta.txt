@@ -1,0 +1,84 @@
+#include<stdio.h>
+
+float media_pares(int mediaPares[4][5]){
+    int count=0,soma=0;
+    float media;
+    for(int i=0;i<4;i++){
+        for(int j=0;j<5;j++){
+            if(mediaPares[i][j]%2==0){
+                soma+=mediaPares[i][j];
+                count++;
+            }
+        }
+    }
+    media=(float)soma/count;
+    return media;
+}
+
+void matriz_soma(int matr1[3][3],int matr2[3][3],int matrizSoma[3][3]){
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            matrizSoma[i][j]=matr1[i][j]+matr2[i][j];
+        }
+    }
+}
+
+int main() {
+  int exercicio, x, continuar = 0;
+  printf("\n Este programa irá resolver os exercicios do rascunho de LPG\n");
+  do {
+
+    printf("\n Escolha um exercício entre 1 e 4: \n");
+
+    scanf("%i", & exercicio);
+
+    if (exercicio == 1) {
+    int mediaPares[4][5];
+    printf("Digite os 20 valores da matriz: \n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<5;j++){
+            scanf("%i",&mediaPares[i][j]);
+        }
+    }
+    printf("Media dos pares: %.2f",media_pares(mediaPares));
+    }
+
+    if (exercicio == 2) {
+        int matr1[3][3],matr2[3][3],matrizSoma[3][3];
+        printf("Digite os valores da primeira matriz:\n");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                scanf("%i",&matr1[i][j]);
+            }
+        }
+        printf("Digite os valores da segunda matriz:\n");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                scanf("%i",&matr2[i][j]);
+            }
+        }
+        matriz_soma(matr1,matr2,matrizSoma);
+        printf("Matriz soma:\n");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                printf("%i ",matrizSoma[i][j]);
+            }
+            printf("\n");
+        }
+
+    }
+
+    if (exercicio == 3) {
+
+    }
+
+    if (exercicio == 4) {
+
+    }
+
+
+    printf("\n\n Deseja continuar? \n Digite 0 para sim e 1 para não \n");
+    scanf("%i", & continuar); //Sobrescreve o valor da variavel Continuar
+  } while (continuar == 0); //Fim repetição menu seleção
+  return 0;
+}

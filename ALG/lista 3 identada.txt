@@ -1,0 +1,246 @@
+#include <stdio.h>
+
+#include <math.h>
+
+#include <stdlib.h>
+
+void Exercicioum() {
+  int n, inteiro, count = 0, m;
+  printf("\n Digite o numero inteiro do qual queres ver a tabuada \n");
+  scanf("%i", & inteiro);
+  printf("\n Digite o valor de números que queres ver na tabuado \n");
+  scanf("%i", & n);
+
+  while (count <= n) {
+    count = count + 1;
+    m = inteiro * count;
+    printf("\n %i \n", m);
+  }
+}
+
+void Exerciciodois() {
+  int num1, num2, i;
+  int count = 0;
+  printf("\n Digite dois numeros inteiros: \n ");
+  scanf("%i", & num1);
+  scanf("%i", & num2);
+  if (num1 <= num2) {
+    for (i = num1; i < num2; i++) {
+      if (i % 2 != 0) {
+        count = count + i;
+        printf("+(%i)", i);
+      }
+    }
+
+    printf("=%i", count);
+  } else {
+    for (i = num1; i >= num2; i--) {
+      if (i % 2 != 0) {
+        count = count + i;
+      }
+    }
+    printf("=%i", count);
+    for (i = num1; i >= num2; i--) {
+      if (i % 2 != 0) {
+        printf("\n +(%i)", i);
+      }
+    }
+  }
+}
+
+void Exerciciotres() {
+  int n, maior, menor, i, dif;
+  printf("\n Digite o numero inteiro de valores que serão verificados:\n");
+  scanf("%i", & n);
+  int a[n];
+  printf("\n Digite os %i valores inteiros\n", n);
+  for (i = 0; i < n; i++) {
+    scanf("%i", & a[i]);
+  }
+  maior = a[0];
+  menor = a[0];
+
+  for (i = 0; i < n; i++) {
+    if (a[i] > maior)
+      maior = a[i];
+    if (a[i] < menor)
+      menor = a[i];
+  }
+  printf("\n A amplitude entre os valores %i e %i é: %i \n", menor, maior, dif = maior - menor);
+}
+
+void Exercicioquatro() {
+  int c;
+  float f, c1, c2;
+  printf("\n Digite a temperatura inicial do intervalo:\n");
+  scanf("%f", & c1);
+  printf("\n Digite a temperatura final do intervalo:\n");
+  scanf("%f", & c2);
+  for (c = c1; c <= c2; c++) {
+    f = (c * 1.8) + 32;
+    if (c % 2 == 0) {
+      printf("\n Temperatura %i Celcius em Fahreit: %f\n", c, f);
+    }
+  }
+  if (c % 2 == 0) //Condição que funcionou para retirar a duplicata de c=c2 caso seja par
+  {
+    printf("\n Temperatura %i Celcius em Fahreit: %f\n", c - 1, f);
+  }
+}
+
+void Exerciciocinco() {
+  int n, soma = 0, d;
+  printf("\n Digite o valor inteiro\n");
+  scanf("%i", & n);
+
+  for (d = 1; d < n; d++) {
+    if (n % d == 0)
+      soma = soma + d;
+  }
+  if (n == soma)
+    printf("\n O numero %i é perfeito\n", n);
+  else
+    printf("\n O numero %i não é perfeito\n", n);
+}
+
+void Exercicioseis() {
+  int nh, nm, i;
+  printf("\n Digite o número de Homens:\n");
+  scanf("%i", & nh);
+  printf("\n Digite o número de mulheres:\n");
+  scanf("%i", & nm);
+  float h[nh], m[nm], maior, soma = 0;
+
+  if (nh != 0) {
+    printf("\n Digite as alturas dos %i homens em centimetros inteiros:\n", nh);
+    for (i = 0; i < nh; i++) {
+      scanf("%f", & h[i]);
+    }
+  }
+
+  if (nm != 0) {
+    printf("\n Digite a altura das %i mulheres em centimetros inteiros:\n", nm);
+    for (i = 0; i < nh; i++) {
+      scanf("%f", & m[i]);
+    }
+  }
+  maior = h[0];
+
+  for (i = 0; i < nh; i++) {
+    if (h[i] > maior)
+      maior = h[i];
+  }
+
+  for (i = 0; i < nm; i++) {
+    soma = soma + m[i];
+  }
+
+  printf("\n A maior altura entre os homens é: %f\n", maior);
+  printf("\n A média da altura das mulheres é: %f\n", soma / nm);
+}
+
+void Exerciciosete() {
+  int i, n, j;
+  printf("\n Digite o numero de valores que serão considerados:\n");
+  scanf("%i", & n);
+  float valor[0], val, media, soma, harm, c[0];
+  printf("\n Digite os %i valores inteiros e positivos:\n", n);
+  i = 0;
+  do {
+    scanf("%f", & valor[i]);
+    val = valor[i];
+    i++;
+  } while (i < n && val >= 0 && val == (int) val);
+
+  if (val < 0 || val != (int) val) {
+    printf("\n Valor inválido \n");
+  }
+
+  for (i = 0; i < n; i++) {
+    soma = soma + valor[i];
+  }
+
+  for (i = 0; i < n; i++) {
+    c[i] = 1 / valor[i];
+  }
+
+  for (i = 0; i < n; i++) {
+    harm = n / c[i];
+  }
+  media = soma / n;
+  printf("\n Média aritmética: %f \n", media);
+  printf("\n A armonica é: %f \n", harm);
+}
+
+void Exerciciooito() {}
+
+void Exercicionove() {}
+
+void Exerciciodez() {}
+
+void Exercicioonze() {}
+
+void Exerciciodoze() {}
+
+int main() {
+  int exercicio, x;
+  printf("\n Este programa irá resolver os exercícios propostos na segunda lista \n");
+  printf("\n Escolha um exercício entre 1 e 10: \n");
+  scanf("%i", & exercicio);
+
+  switch (exercicio) {
+
+  case 1:
+    Exercicioum();
+    break;
+
+  case 2:
+    Exerciciodois();
+    break;
+
+  case 3:
+    Exerciciotres();
+    break;
+
+  case 4:
+    Exercicioquatro();
+    break;
+
+  case 5:
+    Exerciciocinco();
+    break;
+
+  case 6:
+    Exercicioseis();
+    break;
+
+  case 7:
+    Exerciciosete();
+    break;
+
+  case 8:
+    Exerciciooito();
+    break;
+
+  case 9:
+    Exercicionove();
+    break;
+
+  case 10:
+    Exerciciodez();
+    break;
+
+  case 11:
+    Exercicioonze();
+    break;
+
+  case 12:
+    Exerciciodoze();
+    break;
+
+  default:
+    printf("\n O exercicio selecionado não consta na lista \n");
+
+  }
+  return 0;
+}

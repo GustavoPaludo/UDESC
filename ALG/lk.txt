@@ -1,0 +1,33 @@
+Em
+EMANOEL DA SILVA DELFINO
+20:41
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int main() {
+char name[20];
+char gender;
+
+printf("Gender ([M]ale or [F]emale): ");
+scanf("%s", &gender);
+
+printf("\nName: ");
+// fgets(name, sizeof(name), stdin);
+// name[strcspn(name, "\n")] = 0;
+scanf("%s", &name);
+
+switch (gender) {
+case 'F':
+printf("Hello Honorable Ms. %s.", name);
+break;
+case 'M':
+printf("Hello Honorable Mr. %s.", name);
+break;
+default:
+printf("Hello Stranger %s.", name);
+break;
+}
+
+printf("\n\n");
+}

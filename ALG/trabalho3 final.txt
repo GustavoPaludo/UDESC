@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+#include <math.h>
+
+int main() { //Inicio corpo do programa
+  int exercicio = 0, x, continuar = 0;
+  printf("\n Este programa irá resolver o trabalho 3 de ALG \n");
+  do { //Inicio repetição menu
+
+    int MAX = 100, n, i, j;
+    float x[MAX], y[MAX], somax = 0, somay = 0, somaxy = 0, somax2 = 0, a0, a1, den;
+    printf("\n Digite o numero de conjuntos de pontos que serão considerados (Maximo: 100) :\n");
+    scanf("%i", & n);
+
+    if (n > MAX) {
+      printf("\n Valor excede o limite máximo\n");
+      break;
+    }
+
+    printf("\n Informe os pontos:\n");
+
+    for (i = 0; i < n; i++) {
+      printf("\n Digite o valor de x do %i.o ponto: ", i + 1);
+      scanf("%f", & x[i]);
+      printf("\n Digite o valor de y do %i.o ponto: ", i + 1);
+      scanf("%f", & y[i]);
+
+      somax = somax + x[i];
+      somay = somay + y[i];
+      somaxy = somaxy + (x[i] * y[i]);
+      somax2 = somax2 + (x[i] * x[i]);
+    }
+
+    den = ((n * somax2) - (somax * somax));
+    a0 = ((somay * somax2) - (somax * somaxy)) / den;
+    a1 = ((n * somaxy) - (somax * somay)) / den;
+
+    printf("\n Os coeficientes a0 e a1 são: \n A0:%f \n A1:%f \n", a0, a1);
+    printf("\n Os pontos que foram considerados:\n");
+    for (i = 0; i < n; i++) {
+      printf("\n (%.2f,%.2f)", x[i], y[i]);
+    }
+
+    printf("\n Deseja continuar? \n Digite 0 para sim e 1 para não \n");
+    scanf("%i", & continuar); //Sobrescreve o valor da variavel Continuar
+  } while (continuar == 0); //Fim repetição menu seleção
+  return 0;
+}

@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() { //Inicio corpo do programa
+  int opcao,fim=0,aux=1;
+  struct Produto *k;
+  k=malloc(sizeof
+  do { //Inicio repetição menu
+  
+    printf("CADASTRO DE FILMES \n\n");
+    printf("Menu de opções:\n");
+    printf("1-Inserir novo filme\n");
+    printf("2-Listar dodos os filmes\n");
+    printf("3-Consultar dados de um filme\n");
+    printf("4-Excluir um filme\n");
+    printf("5-Sair do programa\n");
+    
+    printf("Digite o numero da opção desejada: ");
+    scanf("%d", &opcao); //seleção opção
+
+    switch(opcao){ //Inicio menu
+
+    case 1:
+      
+      break;
+
+    case 2:
+      
+      break;
+
+    case 3:
+      
+      break;
+
+    case 4:
+     
+      break;
+
+    case 5:
+      fim=1;
+      break;
+
+    default:
+      printf("\n Opção digitada inválida. Digite novamente: \n");
+      break;
+
+    } //fim menu
+  }while(fim==0);  //fim repetição menu
+  return 0;
+}
