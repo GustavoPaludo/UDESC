@@ -1,0 +1,186 @@
+<HTML>
+ <HEAD>
+   <TITLE> Introduçãoo ao Javascript </TITLE>
+ </HEAD>
+
+<BODY>
+	
+<H1> Exercicios para a Aula de Javascript </H1>	
+
+<! ******************************************************>
+
+<!--
+
+<! Exercicio 1 >
+
+<SCRIPT> 
+
+function AltMaiusc () { 
+    document.getElementById("muda1").value = document.getElementById("muda1").value.toUpperCase()     
+    document.getElementById("muda2").value = document.getElementById("muda2").value.toUpperCase()     
+    document.getElementById("muda3").value = document.getElementById("muda3").value.toUpperCase()     
+    document.TCheck.Opt1.checked = false 
+} 
+function AltMinusc () { 
+    document.getElementById("muda1").value = document.getElementById("muda1").value.toLowerCase()
+    document.getElementById("muda2").value = document.getElementById("muda2").value.toLowerCase()    
+    document.getElementById("muda3").value = document.getElementById("muda3").value.toLowerCase()     
+   document.TCheck.Opt2.checked = false 
+} 
+</SCRIPT> 
+
+<p> <form name="TCheck"> Muda Case 1 <input type=text size=20 maxlength=20 name="Muda1" id="muda1"> </p> 
+
+<p> <form name="TCheck"> Muda Case 2 <input type=text size=20 maxlength=20 name="Muda2" id="muda2"> </p> 
+
+<p> <form name="TCheck"> Muda Case 3 <input type=text size=20 maxlength=20 name="Muda3" id="muda3"> </p> 
+
+
+
+<p> 
+Minusculo<input type=checkbox name="Opt1" value="1" checked 
+                  onclick="if (this.checked) 
+                                   { AltMinusc() } "> 
+Maiusculo<input type=checkbox name="Opt2" value="2" 
+                  onclick="if (this.checked) 
+                                   { AltMaiusc() } "> 
+Demo valor<input type=checkbox name="Opt3" 
+                    onclick="if (Opt3.checked) 
+                                     {alert ('Server recebera = ' + Opt3.value) } "> 
+</p> 
+</form> 
+
+-->
+
+<! ******************************************************>
+
+<!--
+
+<! Exercicio 2>
+
+<script> 
+
+function TestaVal() { 
+    var camposVazios = 0;
+    var campos = document.getElementsByName("Teste");
+    for (var i = 0; i < campos.length; i++) {
+        if (campos[i].value == "") {
+            camposVazios++;
+        }
+    }
+    if (camposVazios > 0) {
+        alert("Campo(s) não preenchido(s)...Formulário não submetido");
+        return false;
+    } else {
+        alert("Tudo ok....Formulário submetido");
+        return true;
+    }
+}
+
+</script> 
+
+<p> 
+<form method="POST" name="TesteSub" onSubmit="return TestaVal()" action="teste.html"> 
+Digite um Texto 
+<input type="text" size="10" maxlength="10" name="Teste" value=""> 
+<input type="text" size="10" maxlength="10" name="Teste" value=""> 
+<input type="text" size="10" maxlength="10" name="Teste" value=""> 
+<input type="text" size="10" maxlength="10" name="Teste" value=""> 
+Botao Submit 
+<input type="submit" name="Bsub" value="Manda p/Server"> 
+</p> 
+</form> 
+
+-->
+
+<! ******************************************************>
+
+<!--
+
+<! Exercicio 3>
+
+<script>
+    var nome = prompt("Qual é o seu nome?");
+    var data = new Date();
+    var hora = data.getHours();
+    var cumprimento;
+        
+    if (hora >= 6 && hora < 12) {
+        cumprimento = "Bom dia";
+    } else if (hora >= 12 && hora < 18) {
+        cumprimento = "Boa tarde";
+    } else {
+        cumprimento = "Boa noite";
+    }
+        
+    var diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    var diaSemana = diasSemana[data.getDay()];
+    var dia = data.getDate();
+    var mes = data.getMonth() + 1;
+    var ano = data.getFullYear();
+        
+    document.write(cumprimento + ", " + nome + ", hoje é " + diaSemana + ", " + dia + "/" + mes + "/" + ano + ".");
+</script>
+
+-->
+
+<! ******************************************************>
+
+<!--
+
+<!Exercicio 4>
+
+<SCRIPT> 
+
+function TestaVal() { 
+        var camposVazios = 0;
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            if (campos[i].value == "") {
+                camposVazios++;
+            }
+        }
+        if (camposVazios > 0) {
+            alert("Campo(s) não preenchido(s)...Formulário não submetido");
+            return false;
+        } else {
+            alert("Tudo ok....Formulário submetido");
+            return true;
+        }
+    }
+    function AltMaiusc () { 
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            campos[i].value=campos[i].value.toUpperCase();
+        }    
+        document.TCheck.Opt1.checked = false 
+    } 
+    function AltMinusc () { 
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            campos[i].value=campos[i].value.toLowerCase();
+        }         
+        document.TCheck.Opt2.checked = false 
+    } 
+    </SCRIPT> 
+
+    <form method="POST" name="TesteSub" onSubmit="return TestaVal()" action="teste.html"> 
+        Digite um Texto 
+        <p><input type="text" size="10" maxlength="10" name="Teste" value=""></p> 
+        <p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+        <p></p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+        <p></p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+    <p> 
+    Minusculo<input type=checkbox name="Opt1" value="1" checked 
+                      onclick="if (this.checked) { AltMinusc() } "> 
+    Maiusculo<input type=checkbox name="Opt2" value="2" 
+                      onclick="if (this.checked) { AltMaiusc() } "> 
+    Demo valor<input type=checkbox name="Opt3" 
+                        onclick="if (Opt3.checked) {alert ('Server recebera = ' + Opt3.value) } "> 
+    </p> 
+    <p>Botao Submit 
+        <input type="submit" name="Bsub" value="Manda p/Server">
+    </p>
+    </form> 
+
+-->

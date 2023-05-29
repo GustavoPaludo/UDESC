@@ -1,0 +1,52 @@
+<SCRIPT> 
+
+function TestaVal() { 
+        var camposVazios = 0;
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            if (campos[i].value == "") {
+                camposVazios++;
+            }
+        }
+        if (camposVazios > 0) {
+            alert("Campo(s) não preenchido(s)...Formulário não submetido");
+            return false;
+        } else {
+            alert("Tudo ok....Formulário submetido");
+            return true;
+        }
+    }
+    function AltMaiusc () { 
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            campos[i].value=campos[i].value.toUpperCase();
+        }    
+        document.TCheck.Opt1.checked = false 
+    } 
+    function AltMinusc () { 
+        var campos = document.getElementsByName("Teste");
+        for (var i = 0; i < campos.length; i++) {
+            campos[i].value=campos[i].value.toLowerCase();
+        }         
+        document.TCheck.Opt2.checked = false 
+    } 
+    </SCRIPT> 
+
+    <form method="POST" name="TesteSub" onSubmit="return TestaVal()" action="teste.html"> 
+        Digite um Texto 
+        <p><input type="text" size="10" maxlength="10" name="Teste" value=""></p> 
+        <p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+        <p></p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+        <p></p><input type="text" size="10" maxlength="10" name="Teste" value=""> </p>
+    <p> 
+    Minusculo<input type=checkbox name="Opt1" value="1" checked 
+                      onclick="if (this.checked) { AltMinusc() } "> 
+    Maiusculo<input type=checkbox name="Opt2" value="2" 
+                      onclick="if (this.checked) { AltMaiusc() } "> 
+    Demo valor<input type=checkbox name="Opt3" 
+                        onclick="if (Opt3.checked) {alert ('Server recebera = ' + Opt3.value) } "> 
+    </p> 
+    <p>Botao Submit 
+        <input type="submit" name="Bsub" value="Manda p/Server">
+    </p>
+    </form> 

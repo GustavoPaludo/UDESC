@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmins="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <style type="text/css">
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: "100%";
+            }
+            td, th {
+                border: 2px solid saddlebrown;
+                text-align: center;
+                padding: 8px;
+            }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="estilo_css.css">
+        <title>Pagina de Receitas</title>
+    </head>
+    <body>
+        <center>
+        <h1>Pagina de Receitas</h1>
+        <br/>
+        <img src="paginareceitas.jpg" id="imagem pagina de receitas" alt="Pagina de Receitas" width="350" height="400"/>
+        <br/><br/>
+        <i>Pular para: </i>
+        <a href="#Tabela de Receitas">Tabela de Receitas</a><br>
+        <a href="#Formulario">Formularios </a><br>
+        <a href="#Links Referencia">Links de Referencia </a>
+        <br/><br/>
+        <hr/>
+        <br/>
+        <a name="Tabela de Receitas"> </a>
+        <h3>Tabela de Receitas:</h3>
+        <table>
+            <tr>
+                <td>Receita Torta de Limão</td>
+                <td><a href="RECEITATORTALIMAO.html" target="_blank">Clique para ver a receita</a></td>
+                <td><img src="tortadelimao.jpeg" id="imagem torta de limao" alt="Imagem torta de limão" width="40" height="35"></td>
+            </tr>
+            
+            <tr>
+                <td>Receita Torta de Frango</td>
+                <td><a href="RECEITATORTAFRANGO.html" target="_blank">Clique para ver a receita</a></td>
+                <td><img src="tortadefrango.jpeg" id="imagem torta de frango" alt="Imagem torta de frango" width="40" height="35"></td>
+            </tr>
+
+            <tr>
+                <td>Receita Bolo de Chocolate</td>
+                <td><a href="RECEITABOLOCHOCOLATE.html" target="_blank">Clique para ver a receita</a></td>
+                <td><img src="bolodechocolate.jpeg" id="imagem bolo chocolote" alt="Imagem bolo de chocolate" width="40" height="35"></td>
+            </tr>
+
+        </table>
+        <br/>
+        <hr/>
+        <br/>
+        <a id="Formulario" name="#Formulario"></a>
+        <h3>Formulario:</h3>
+        <p>Para auxiliar em futuras publicações, responda com seus dados abaixo, eles irão auxiliar nas estatisticas do site</p>
+        <br/><br/>
+        <form action="/action_page.php" autocomplete="on">
+            <label for="fname">Primeiro Nome:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Sobrenome:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            
+            <label for="aniversario">Aniversario:</label><br>
+            <input type="date" id="aniversario" name="aniversario"><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email">
+
+            <p>Escolha sua receita favorita:</p>
+                <input list="receitas" name="receitas">
+                <datalist id="receitas">
+                  <option value="Torta de Limão">
+                  <option value="Torta de Frango">
+                  <option value="Bolo de Chocolate">
+                </datalist><br><br>
+                <input type="submit" value="Enviar">   
+
+        </form> 
+
+        <br/>
+        <hr/>
+        <br/>
+        <a name="Links Referencia"></a>
+        <a href="https://www.tudogostoso.com.br/receita/104383-torta-de-limao.html" target="_blank">Link para o site original da Torta de Limão</a><br>
+        <a href="https://www.tudogostoso.com.br/receita/1282-torta-de-frango.html" target="_blank">Link para o site original da Torta de Frango</a><br>
+        <a href="https://www.tudogostoso.com.br/receita/62547-a-melhor-receita-de-bolo-de-chocolate.html" target="_blank">Link para o site original do Bolo de Chocolat</a><br>
+        <br/><br/>
+    </center>
+    </body>
+</html>

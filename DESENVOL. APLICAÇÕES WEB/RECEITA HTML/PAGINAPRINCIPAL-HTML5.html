@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmins="http://www.w3.org/1999/xhtml">
+    <head>
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: "100%";
+            }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        header,footer {
+            background-image: url('restaurant-mural.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        section{
+            background-color:beige ;
+        }
+        nav{
+            background-color: beige;
+        }
+        aside{
+            background-color: black;
+            width: 20%;
+            height: 100%;
+            float: right;
+        }
+        </style>
+        <title>Pagina de Receitas</title>
+    </head>
+    <body bgcolor="000000">
+            <header>
+                <center>
+                    <br/><br/>
+                        <h1 style=" color:red; font-family:Verdana, Geneva, Tahoma, sans-serif;">Pagina de Receitas</h1>
+                    <br/><br/>
+                </center>
+            </header>
+
+            <nav>
+                <a href="#Tabela de Receitas">Tabela de Receitas</a> |
+                <a href="#Formulario">Formularios </a> |
+                <a href="#Links Referencia">Links de Referencia </a>
+            </nav>
+
+            <aside>
+                <video controls autoplay class="bg_video" width="300" height="630">
+                    <source src="movie.mp4" type="video/mp4">
+                </video>
+            </aside>
+
+            <section>
+            <center>
+                <a name="Tabela de Receitas"> </a>
+                <h3 style="color:red">Tabela de Receitas:</h3>
+                <table>
+                    <tr>
+                        <td>Receita Torta de Limão</td>
+                        <td><a href="RECEITATORTALIMAO.html" target="_blank">Clique para ver a receita</a></td>
+                        <td><img src="tortadelimao.jpeg" id="imagem torta de limao" alt="Imagem torta de limão" width="40" height="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Receita Torta de Frango</td>
+                        <td><a href="RECEITATORTAFRANGO.html" target="_blank">Clique para ver a receita</a></td>
+                        <td><img src="tortadefrango.jpeg" id="imagem torta de frango" alt="Imagem torta de frango" width="40" height="35"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Receita Bolo de Chocolate</td>
+                        <td><a href="RECEITABOLOCHOCOLATE.html" target="_blank">Clique para ver a receita</a></td>
+                        <td><img src="bolodechocolate.jpeg" id="imagem bolo chocolote" alt="Imagem bolo de chocolate" width="40" height="35"></td>
+                    </tr>
+                </table>
+
+            </center>
+            </section>
+
+            
+
+        <section>
+        <center>
+            <a id="Formulario" name="#Formulario"></a>
+            <h3 style="color:red">Formulario:</h3>
+            <p>Para auxiliar em futuras publicações, responda com seus dados abaixo, eles irão auxiliar nas estatisticas do site</p>
+            <br/>
+            <form action="/action_page.php" autocomplete="on">
+            <label for="fname">Primeiro Nome:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Sobrenome:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            
+            <label for="aniversario">Aniversario:</label><br>
+            <input type="date" id="aniversario" name="aniversario"><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email">
+
+            <p>Escolha sua receita favorita:</p>
+                <input list="receitas" name="receitas">
+                <datalist id="receitas">
+                  <option value="Torta de Limão">
+                  <option value="Torta de Frango">
+                  <option value="Bolo de Chocolate">
+                </datalist></br>
+                <input type="submit" value="Enviar">   </br>
+                <img src="click.gif" alt="Click Here" style="width:48px;height:48px;">
+            </form>
+        </center> 
+        </section>
+
+        <footer>
+            <center>
+            <a name="Links Referencia"></a></br>
+            <a href="https://www.tudogostoso.com.br/receita/104383-torta-de-limao.html" target="_blank" style="color: red;">Link para o site original da Torta de Limão</a>  |
+            <a href="https://www.tudogostoso.com.br/receita/1282-torta-de-frango.html" target="_blank" style="color: red;">Link para o site original da Torta de Frango</a>  |
+            <a href="https://www.tudogostoso.com.br/receita/62547-a-melhor-receita-de-bolo-de-chocolate.html" target="_blank" style="color: red;">Link para o site original do Bolo de Chocolate</a>
+            </br></br>
+            </center>
+        </footer>
+    </body>
+</html>
